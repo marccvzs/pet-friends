@@ -1,0 +1,10 @@
+import { formOptions } from '@tanstack/react-form-nextjs';
+
+export const formOpts = formOptions({
+    defaultValues: {
+        name: '',
+        age: 0,
+        type: '',
+        breed: [{ label: '', value: '' }],
+    },
+});
