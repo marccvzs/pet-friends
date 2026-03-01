@@ -1,4 +1,4 @@
-import AddPet from "@/app/_components/dialog/AddPet";
+import AddPet from "@/app/_components/form/AddPet";
 
 export default async function UserPage({
     params
@@ -9,7 +9,7 @@ export default async function UserPage({
 
 
     return (
-        <div className="bg-gray-300 px-4 py-8 flex flex-row justify-between">
+        <div className="bg-gray-300 px-4 py-8 flex flex-col gap-4 justify-between">
             <p className="text-black text-2xl">{`Hi, ${userId}`}</p>
             <AddPet />
         </div>
