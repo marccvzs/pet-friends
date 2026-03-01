@@ -16,7 +16,7 @@ export function Decrement({ className, ...props }: NumberField.Decrement.Props) 
     return (
         <NumberField.Decrement
             className={clsx(
-                'flex size-10 items-cemter justify-center rounded-tl-md rounded-bl-md border border-gray-200 bg-gray-50 bg-clip-padding text-gray-900 select-none hover:bg-gray-100 active:bg-gray-100',
+                'flex size-10 items-center justify-center rounded-tl-md rounded-bl-md border border-gray-200 bg-gray-50 bg-clip-padding text-gray-900 select-none hover:bg-gray-100 active:bg-gray-100',
                 className,
             )}
             {...props}

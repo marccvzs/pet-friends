@@ -17,9 +17,8 @@ model User {
   id              Int              @id @default(autoincrement())
   email           String           @unique
   name            String?
+  foster          Boolean
   posts           Pet[]
-  inquiries       Inquiry[]
-  inquiriesOnPets InquiriesOnPet[]
 }
 
 model Pet {
@@ -47,20 +46,6 @@ model Inquiry {
   lastName        String
   email           String
   phone           String?
-  fosterId        Int
-  foster          User             @relation(fields: [fosterId], references: [id])
   petId           Int
   pet             Pet              @relation(fields: [petId], references: [id])
-  inquiriesOnPets InquiriesOnPet[]
-}
-
-model InquiriesOnPet {
-  pet        User     @relation(fields: [petId], references: [id])
-  petId      Int
-  inquiry    Inquiry  @relation(fields: [inquiryId], references: [id])
-  inquiryId  Int
-  assignedAt DateTime @default(now())
-  assignedBy String
-
-  @@id([petId, inquiryId])
 }
